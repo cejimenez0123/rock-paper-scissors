@@ -25,46 +25,40 @@ function compareChoice(userChoice,computerChoice){
             if(computerChoice==options.rock){
                 alert("Computer chose rock")
                 userScore+=1
-                alert(`User Score: ${userScore}-Computer Score: ${computerScore}`)
-            }else{
+        }else{
                 alert("Computer chose Scissors")
                 computerScore+=1
-                alert(`User Score: ${userScore}-Computer Score: ${computerScore}`)
-            }
+     }
         }else if(userChoice==options.rock){
             if(computerChoice==options.paper){
                 alert("Computer chose paper")
                 computerScore+=1
-                alert(`User Score: ${userScore}-Computer Score: ${computerScore}`)
-            }else{
+        }else{
                 alert("Computer chose Scissors")
                 userScore+=1
-                alert(`User Score: ${userScore}-Computer Score: ${computerScore}`)
-            }
+        }
         }else if(userChoice==options.scissors){
             if(computerChoice==options.rock){
                 alert("Computer chose rock")
                 computerScore+=1
-                alert(`User Score: ${userScore}-Computer Score: ${computerScore}`)
-            }else{
+        }else{
                 alert("Computer chose paper")
                 userScore+=1
-                alert(`User Score: ${userScore}-Computer Score: ${computerScore}`)
-            }
+       }
         }
 }
-//takes in userChoice() and computerChoice() as arguments
-//use if else to test user vs computer
-//output alert messages for each outcome - ex: "user chose paper. computer chose rock. paper covers rock! player wins"
-//increments the winners score
+
 
 function playGame(){
     let round = 1
     while(userScore<2 && computerScore<2){
         round+=1
+        
         let userChoice =getUserChoice()
         let computerChoice = getComputerChoice()
         compareChoice(userChoice,computerChoice)
+        alert(`User Score: ${userScore}-Computer Score: ${computerScore}`)
+       
     }
     if(userScore>computerScore){
         alert("You Win")
