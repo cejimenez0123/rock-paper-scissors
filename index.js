@@ -52,6 +52,7 @@ function compareChoice(userChoice,computerChoice){
 function playGame(){
     let round = 1
     while(userScore<2 && computerScore<2){
+        alert(`Round ${round}`)
         round+=1
         
         let userChoice =getUserChoice()
